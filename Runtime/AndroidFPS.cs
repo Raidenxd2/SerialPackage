@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace KillItMyself.Android.Runtime
+namespace SerialPackage.Runtime
 {
     public class AndroidFPS : MonoBehaviour
     {
