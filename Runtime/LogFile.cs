@@ -11,7 +11,10 @@ namespace SerialPackage.Runtime
         {
             if (PlayerPrefs.GetInt("CreateLogFile", 0) == 0)
             {
-                return;
+                if (!File.Exists(Application.persistentDataPath + "/CreateLogFile"))
+                {
+                    return;
+                }
             }
 
             if (File.Exists(Application.temporaryCachePath + "/Log.txt"))

@@ -1,3 +1,4 @@
+#if UNITY_ANDROID || UNITY_EDITOR
 using UnityEngine;
 
 namespace SerialPackage.Runtime
@@ -11,3 +12,4 @@ namespace SerialPackage.Runtime
         }
     }
 }
+#endif

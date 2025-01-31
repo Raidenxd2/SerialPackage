@@ -5,7 +5,7 @@ using System.IO;
 namespace SerialPackage.Edito
 {
     [InitializeOnLoad]
-    public class ShaderSwitcher : UnityEditor.Editor
+    public class ShaderSwitcher : Editor
     {
         static ShaderSwitcher()
         {
@@ -44,12 +44,6 @@ namespace SerialPackage.Edito
         private static void SwitchShaders(bool forceAndroid = false, bool forcePC = false)
         {
             Debug.Log("(SerialPackage) build_target does not match the current build target!");
-
-            if (forceAndroid && forcePC)
-            {
-                Debug.LogError("(SerialPackage) Cannot force Android and PC shaders!");
-                return;
-            }
 
             BuildTarget bt = EditorUserBuildSettings.activeBuildTarget;
 
