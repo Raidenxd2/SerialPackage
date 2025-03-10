@@ -31,7 +31,7 @@ namespace SerialPackage.Runtime
 
         static void HandleLog(string logString, string stackTrace, LogType type)
         {
-            File.AppendAllText(Application.temporaryCachePath + "/Log.txt", type.ToString() + Environment.NewLine + logString + Environment.NewLine + stackTrace);
+            File.AppendAllText(Application.temporaryCachePath + "/Log.txt", "[" + type.ToString() + "] " + logString + Environment.NewLine + stackTrace);
         }
     }
 }

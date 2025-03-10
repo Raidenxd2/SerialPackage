@@ -1,12 +1,12 @@
 {
   "name": "com.raiden.serial",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "displayName": "Serial",
   "unity": "2022.3",
   "description": "Unity package for my games",
   "author": {
-    "name" : "Raidenxd2",
-    "url" : "https://raidenxd2.github.io/"
+    "name": "Raidenxd2",
+    "url": "https://raidenxd2.github.io/"
   },
   "keywords": [
     "android",

@@ -1,0 +1,20 @@
+{
+    "name": "SerialPackage.Runtime.BackupRestore",
+    "rootNamespace": "SerialPackage.Runtime.BackupRestore",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.unity.sharp-zip-lib",
+            "expression": "",
+            "define": "SERIALPACKAGE_SHARPZIPLIB"
+        }
+    ],
+    "noEngineReferences": false
+}
