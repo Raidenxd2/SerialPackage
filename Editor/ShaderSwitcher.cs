@@ -29,21 +29,21 @@ namespace SerialPackage.Edito
             SwitchShaders();
         }
 
-        [MenuItem("Serial Package/Force Platform Shader Switch (Android)")]
-        public static void SwitchShadersAndroid()
+        [MenuItem("Serial Package/Force Platform Shader Switch (Mobile)")]
+        public static void SwitchShadersMobile()
         {
-            SwitchShaders(true);
+            SwitchShaders(forceMobile: true);
         }
 
         [MenuItem("Serial Package/Force Platform Shader Switch (PC)")]
         public static void SwitchShadersPC()
         {
-            SwitchShaders(false, true);
+            SwitchShaders(forcePC: true);
         }
 
-        private static void SwitchShaders(bool forceAndroid = false, bool forcePC = false)
+        private static void SwitchShaders(bool forceMobile = false, bool forcePC = false)
         {
-            Debug.Log("(SerialPackage) build_target does not match the current build target!");
+            Debug.Log("(SerialPackage) Switching shaders based on current build target or forced platform");
 
             BuildTarget bt = EditorUserBuildSettings.activeBuildTarget;
 
@@ -59,7 +59,7 @@ namespace SerialPackage.Edito
             {
                 standalone = true;
             }
-            if (bt == BuildTarget.Android || forceAndroid)
+            if (bt == BuildTarget.Android || bt == BuildTarget.iOS || forceMobile)
             {
                 standalone = false;
                 mobile = true;
