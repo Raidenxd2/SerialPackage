@@ -1,6 +1,6 @@
 {
   "name": "com.raiden.serial",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "displayName": "Serial",
   "unity": "2022.3",
   "description": "Unity package for my games",
