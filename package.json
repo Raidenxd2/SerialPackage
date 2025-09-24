@@ -1,8 +1,8 @@
 {
   "name": "com.raiden.serial",
-  "version": "1.0.3",
+  "version": "2.0.0",
   "displayName": "Serial",
-  "unity": "2022.3",
+  "unity": "6000.0",
   "description": "Unity package for my games",
   "author": {
     "name": "Raidenxd2",
@@ -12,5 +12,8 @@
     "android",
     "material",
     "serial"
-  ]
+  ],
+  "dependencies": {
+    "com.unity.ugui": "2.0.0"
+  }
 }
