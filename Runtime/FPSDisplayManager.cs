@@ -23,6 +23,11 @@ namespace SerialPackage.Runtime
             float lastTime = Time.realtimeSinceStartup;
             await UniTask.WaitForSeconds(1f);
 
+            if (FPSDisplayRoot == null)
+            {
+                return;
+            }
+
             if (!FPSDisplayRoot.activeSelf)
             {
                 FPSUpdate().Forget();
