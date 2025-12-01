@@ -9,7 +9,7 @@ namespace SerialPackage.Runtime
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
         static void Awake()
         {
-            if (PlayerPrefs.GetInt("CreateLogFile", 0) == 0)
+            if (PlayerPrefs.GetInt("CreateLogFile", 0) == 1)
             {
                 if (!File.Exists(Application.persistentDataPath + "/CreateLogFile"))
                 {
