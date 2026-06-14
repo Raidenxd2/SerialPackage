@@ -10,6 +10,7 @@ namespace SerialPackage.Runtime
     {
         public static bool VerboseLogging;
         
+#if !UNITY_WEBGL
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
         public static void CheckArg()
         {
@@ -18,9 +19,13 @@ namespace SerialPackage.Runtime
                 VerboseLogging = true;
             }
         }
+#endif
         
         public static void Log(string text, Object source)
         {
+#if UNITY_WEBGL
+            Debug.Log(text);
+#else
             string logString;
             if (VerboseLogging)
             {
@@ -35,10 +40,14 @@ namespace SerialPackage.Runtime
                 logString = "[LOG] " + text;
             }
             Debug.Log(logString, source);
+#endif
         }
 
         public static void LogError(string text, Object source)
         {
+#if UNITY_WEBGL
+            Debug.LogError(text);
+#else
             string logString;
             if (VerboseLogging)
             {
@@ -53,10 +62,14 @@ namespace SerialPackage.Runtime
                 logString = "[ERROR] " + text;
             }
             Debug.LogError(logString, source);
+#endif
         }
 
         public static void LogWarning(string text, Object source)
         {
+#if UNITY_WEBGL
+            Debug.LogWarning(text);
+#else
             string logString;
             if (VerboseLogging)
             {
@@ -71,6 +84,7 @@ namespace SerialPackage.Runtime
                 logString = "[WARNING] " + text;
             }
             Debug.LogWarning(logString, source);
+#endif
         }
     }
 }
